@@ -14,8 +14,9 @@ for i,v in pairs(HWIDTable) do
     end
 end
 
-if allowed then
-    loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/0c45707c2642f7287e4606c9d53a09fd3ee8c88cd56351fa1280265b8f80b599/download"))()
-else
+if not allowed then
     game.Players.LocalPlayer:Kick("Invalid HWID")
+    return
 end
+
+-- continue here
